@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+//包名
+option java_package = "com.example.mrproduct.proto";
+
+//生成的java名
+option java_outer_classname = "WebSocketInfo";
+
+message msgMessage{
+  string type = 1; //1-登录 2-指令消息 3-经纬度消息 4-其他消息 5-退出
+  string user = 2;//信息发送者(那个页面发送的)
+  string message = 3 ; //发送的数据
+  string otherMsg = 4; //其他数据1
+  bytes otherMsgByte = 5; //其他信息2
+}
